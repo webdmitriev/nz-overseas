@@ -11,7 +11,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     width: 100%;
   }
   .header-logotype {
@@ -20,13 +20,13 @@
     height: 70px;
     background-color: red;
   }
-  .header-menu-en {
+  .header-menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 40px;
-    max-width: calc(100% - 580px);
+    max-width: calc(100% - 740px);
     width: 100%;
     .menu-item {
       display: block;
@@ -36,6 +36,7 @@
         font-family: var(--font-primary);
         font-weight: 400;
         font-size: 16px;
+        line-height: 44px;
         color: var(--menu-color);
         transition: all 0.4s ease;
       }
