@@ -1,3 +1,12 @@
+:root {
+  --accent-color: #0f5eaf;
+  --menu-color: #222222;
+  --ice-color: #e8f3f9;
+
+  --font-primary: "Montserrat", sans-serif;
+  --font-size: 16px;
+}
+
 /*
   Colors
 */
@@ -7,17 +16,15 @@ $black: #313131;
 $xss: 1640;
 $xs: 1440;
 $md: 767;
-$container: 1420px;
+$container: 1520px;
 $indent: 10px;
-$ff: "Inter", sans-serif;
-$fz: 16px;
-$lh: 1.4;
+$lh: 1.3;
 
 body {
   margin-bottom: 0;
-  font-family: $ff;
+  font-family: var(--font-primary);
   font-weight: 400;
-  font-size: $fz;
+  font-size: var(--font-size);
   line-height: $lh;
   color: $black;
 }
@@ -44,112 +51,6 @@ body {
   @media (max-width: #{$md}px) {
     max-width: 600px;
   }
-}
-
-.pos-r {
-  position: relative;
-}
-
-.d-block {
-  display: block;
-}
-
-.df-fs-fs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.df-fs-ce {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-.df-fs-fe {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-.df-fs-st {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: stretch;
-}
-
-.df-ce-fs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-}
-.df-ce-ce {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.df-ce-fe {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-end;
-}
-.df-ce-st {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-}
-
-.df-fe-fs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-.df-fe-ce {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
-}
-.df-fe-fe {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.df-sp-fs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.df-sp-ce {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-.df-sp-fe {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-.df-sp-st {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
-}
-
-.w-100p {
-  width: 100%;
 }
 
 .scroll-line-none::-webkit-scrollbar {
@@ -179,6 +80,7 @@ body {
 
 button,
 input,
+select,
 textarea {
   cursor: pointer;
 }
@@ -192,12 +94,6 @@ textarea {
   }
   &.line-clamp-2 {
     -webkit-line-clamp: 2;
-  }
-  &.line-clamp-3 {
-    -webkit-line-clamp: 3;
-  }
-  &.line-clamp-4 {
-    -webkit-line-clamp: 4;
   }
 }
 

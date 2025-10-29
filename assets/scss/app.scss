@@ -1,13 +1,12 @@
 @import "reset";
-@import "../slick/slick.min.css";
-@import "../slick/slick-theme.min.css";
-@import '../fonts/stylesheet.css';
-@import 'data';
+@import "data";
 
-@import 'header';
-@import 'progress-content';
+@import "header";
 
-@import 'main';
+@import "main";
+@import "request";
 
-@import 'popup';
-@import 'footer';
+@import "footer";
+@import "popup";
+
+@import "hover";
