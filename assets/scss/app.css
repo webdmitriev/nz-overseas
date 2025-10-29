@@ -186,9 +186,11 @@ ul {
 
 :root {
   --accent-color: #298dcd;
-  --menu-color: #222222;
+  --menu-color: #363c4d;
+  --text-color: #363c4d;
   --ice-color: #e8f3f9;
   --ice-bg-color: #eef5fa;
+  --gold-color: #b38c4b;
   --font-primary: "Open Sans", sans-serif;
   --font-size: 16px;
 }
@@ -292,7 +294,7 @@ textarea {
   display: block;
   width: 1920px;
   height: 100%;
-  max-height: 668px;
+  max-height: 810px;
   transform: translateX(-50%);
   z-index: 5;
 }
@@ -698,11 +700,78 @@ textarea {
     height: 14px;
   }
 }
+.h1 {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 76px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: var(--gold-color);
+}
+
+.sub_title {
+  display: block;
+  width: 100%;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
 .main {
   position: relative;
   display: block;
   width: 100%;
+  padding-block: 160px 74px;
   z-index: 50;
+}
+.main .line-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+.main .main-content {
+  display: block;
+  width: 100%;
+  max-width: 540px;
+  padding-top: 140px;
+}
+.main .main-content .h1 {
+  margin-bottom: 10px;
+}
+.main .main-images {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  padding-top: 10px;
+  padding-right: 90px;
+}
+.main .main-images .image-01 {
+  position: relative;
+  display: block;
+  width: 350px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 16px;
+  z-index: 20;
+}
+.main .main-images .images-container {
+  position: absolute;
+  top: -20px;
+  right: 58px;
+  display: block;
+  width: 602px;
+  height: 560px;
+  border: 2px solid #f1e9d9;
+  border-radius: 16px;
 }
 
 .main {

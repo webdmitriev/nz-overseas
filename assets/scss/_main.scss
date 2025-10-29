@@ -2,7 +2,51 @@
   position: relative;
   display: block;
   width: 100%;
+  padding-block: 160px 74px;
   z-index: 50;
+  .line-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .main-content {
+    display: block;
+    width: 100%;
+    max-width: 540px;
+    padding-top: 140px;
+    .h1 {
+      margin-bottom: 10px;
+    }
+  }
+  .main-images {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 760px;
+    padding-top: 10px;
+    padding-right: 90px;
+    .image-01 {
+      position: relative;
+      display: block;
+      width: 350px;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 16px;
+      z-index: 20;
+    }
+    .images-container {
+      position: absolute;
+      top: -20px;
+      right: 58px;
+      display: block;
+      width: 602px;
+      height: 560px;
+      border: 2px solid #f1e9d9;
+      border-radius: 16px;
+    }
+  }
 }
 
 @media (max-width: 1440px) {
