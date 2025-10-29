@@ -302,11 +302,21 @@ textarea {
   gap: 2px;
   width: 100%;
   height: 100%;
+  z-index: 5;
 }
 .nz-background .background-blue span {
   width: 100%;
   height: 2px;
   background-color: var(--ice-bg-color);
+}
+.nz-background .background-gold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
 }
 
 .header {
