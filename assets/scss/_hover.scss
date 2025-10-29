@@ -9,4 +9,9 @@
       color: $white;
     }
   }
+
+  .main .line-items .line-item:hover:before {
+    height: calc(100% + 20px);
+    background-color: #0f5eaf;
+  }
 }
