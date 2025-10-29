@@ -1,5 +1,12 @@
 @media (hover: hover) and (pointer: fine) {
-  .header .header-menu-en .menu-item a:hover {
+  .header .header-menu .menu-item a:hover {
     color: var(--accent-color);
+  }
+
+  .header .header-lang .menu-item:hover {
+    background-color: var(--accent-color);
+    a {
+      color: $white;
+    }
   }
 }

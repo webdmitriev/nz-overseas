@@ -7,25 +7,44 @@
 
 		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" href="./assets/scss/app.css?ver=0.0.1" />
 	</head>
 	<body class="is-animation">
+
 		<div id="app">
 			<div class="nz-background">
-				<div class="background-blue"></div>
-				<div class="background-gold"></div>
+				<div class="line-horizontals">
+					<span class="line-horizontal"></span>
+					<span class="line-horizontal"></span>
+					<span class="line-horizontal"></span>
+					<span class="line-horizontal"></span>
+				</div>
+				<div class="line-verticals">
+					<span class="line-vertical"></span>
+					<span class="line-vertical"></span>
+					<span class="line-vertical"></span>
+					<span class="line-vertical"></span>
+					<span class="line-vertical"></span>
+					<span class="line-vertical"></span>
+					<span class="line-vertical"></span>
+					<span class="line-vertical"></span>
+					<span class="line-vertical"></span>
+					<span class="line-vertical"></span>
+					<span class="line-vertical"></span>
+					<span class="line-vertical"></span>
+				</div>
 			</div>
 
 			<header class="header">
 				<div class="container">
 					<div class="line-wrap">
-						<a href="/" class="header-logotype">logotype</a>
+						<a href="/" class="header-logotype"><img src="./assets/img/header/logotype.svg" alt="alto" /></a>
 
-						<ul class="header-menu">
+						<ul class="header-menu" style="display: none;">
 							<li class="menu-item"><a href="#link">Services</a></li>
 							<li class="menu-item"><a href="#link">About Us</a></li>
 							<li class="menu-item"><a href="#link">Compliance</a></li>
@@ -39,7 +58,7 @@
 							<li class="menu-item ru"><a href="#link">Ru</a></li>
 						</ul>
 
-						<button class="burger"><span></span></button>
+						<button class="burger" style="display: none;"><span></span></button>
 					</div>
 				</div>
 			</header>
