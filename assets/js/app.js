@@ -417,4 +417,66 @@ document.addEventListener('DOMContentLoaded', function () {
     $(this).toggleClass("active")
   })
 
+  // ***********
+  // phone input
+  initNumberPlusInputs()
+  function initNumberPlusInputs() {
+    document.querySelectorAll('[name="user-phone"]').forEach(input => {
+      input.addEventListener('input', function () {
+        // Оставляем только цифры и +
+        this.value = this.value.replace(/[^0-9+]/g, '');
+
+        // Обрабатываем + (только один в начале)
+        if (this.value.includes('+')) {
+          const numbers = this.value.replace(/\+/g, '');
+          this.value = numbers ? '+' + numbers : '';
+        }
+      });
+
+      input.addEventListener('blur', function () {
+        if (this.value === '+') this.value = '';
+      });
+    });
+  }
+
+  // ***********
+  // email input
+  initEmailInputsMinimal();
+  function initEmailInputsMinimal() {
+    document.querySelectorAll('[name="user-email"]').forEach(input => {
+
+      // Просто очищаем недопустимые символы
+      input.addEventListener('input', function () {
+        this.value = this.value.replace(/[^a-zA-Z0-9@._%+-]/g, '');
+      });
+
+      // Валидация при отправке формы или потере фокуса
+      input.addEventListener('blur', function () {
+        validateEmailField(this);
+      });
+    });
+  }
+
+  function validateEmailField(input) {
+    const value = input.value.trim();
+
+    if (!value) {
+      input.style.borderColor = '';
+      return true;
+    }
+
+    if (!isValidEmail(value)) {
+      input.style.border = '2px solid red';
+      return false;
+    }
+
+    input.style.border = '2px solid var(--menu-footer)';
+    return true;
+  }
+
+  function isValidEmail(email) {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  }
+
 });

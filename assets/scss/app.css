@@ -186,11 +186,16 @@ ul {
 
 :root {
   --accent-color: #298dcd;
+  --accent-2-color: #0f5eaf;
+  --items-color: rgba(41, 141, 205, 0.75);
   --menu-color: #363c4d;
+  --menu-footer: #eaf4fa;
   --text-color: #363c4d;
   --ice-color: #e8f3f9;
   --ice-bg-color: #eef5fa;
   --gold-color: #b38c4b;
+  --gold-light-color: #f1e9d9;
+  --line-bg-color: rgba(255, 245, 247, 0.7);
   --font-primary: "Open Sans", sans-serif;
   --font-size: 16px;
 }
@@ -316,12 +321,12 @@ textarea {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: rgba(255, 245, 247, 0.7);
+  background-color: var(--line-bg-color);
 }
 .nz-background .line-vertical {
   width: 2px;
   height: 100%;
-  background-color: rgba(255, 245, 247, 0.7);
+  background-color: var(--line-bg-color);
 }
 .nz-background .line-horizontal:nth-child(1n+1) {
   top: calc(140px * 1);
@@ -918,7 +923,7 @@ textarea {
   position: absolute;
   display: block;
   width: 18px;
-  background-color: #eaf4fa;
+  background-color: var(--menu-footer);
   z-index: 5;
 }
 .main .main-content .candle:before {
@@ -927,7 +932,7 @@ textarea {
   left: 50%;
   display: block;
   width: 42px;
-  background-color: #eaf4fa;
+  background-color: var(--menu-footer);
   transform: translateX(-50%);
 }
 .main .main-content .candle.candle-01 {
@@ -1010,7 +1015,7 @@ textarea {
   display: block;
   width: 602px;
   height: 560px;
-  border: 2px solid #f1e9d9;
+  border: 2px solid var(--gold-light-color);
   border-radius: 16px;
 }
 .main .main-images .images-container .rhombus-top,
@@ -1021,7 +1026,7 @@ textarea {
   height: 108px;
   background-color: rgba(228, 212, 181, 0.2);
   backdrop-filter: blur(5px);
-  border: 2px solid #f1e9d9;
+  border: 2px solid var(--gold-light-color);
   transform: skewY(16deg);
   z-index: 30;
 }
@@ -1038,7 +1043,7 @@ textarea {
   position: absolute;
   width: 148px;
   height: 138px;
-  background-color: #eaf4fa;
+  background-color: var(--menu-footer);
   z-index: 8;
 }
 .main .main-images .images-container .square-bg-top {
@@ -1055,7 +1060,7 @@ textarea {
   width: 32px;
   height: 32px;
   background-color: #ffffff;
-  border: 2px solid #f1e9d9;
+  border: 2px solid var(--gold-light-color);
   transform: rotate(45deg);
   z-index: 10;
 }
@@ -1069,12 +1074,12 @@ textarea {
 .main .main-images .images-container .square:before {
   width: 12px;
   height: 12px;
-  background-color: #f1e9d9;
+  background-color: var(--gold-light-color);
 }
 .main .main-images .images-container .square:after {
   width: 8px;
   height: 8px;
-  background-color: #c8a86a;
+  background-color: var(--gold-color);
 }
 .main .main-images .images-container .square.square-01 {
   top: -17px;
@@ -1111,7 +1116,7 @@ textarea {
 .main .main-images .images-container .cup {
   position: absolute;
   width: 2px;
-  background-color: #c8a86a;
+  background-color: var(--gold-color);
   z-index: 28;
 }
 .main .main-images .images-container .cup:before {
@@ -1121,7 +1126,7 @@ textarea {
   left: 50%;
   width: 12px;
   height: 100%;
-  background-color: #c8a86a;
+  background-color: var(--gold-color);
   transform: translateX(-50%);
 }
 .main .main-images .images-container .cup.cup-01 {
@@ -1352,7 +1357,7 @@ textarea {
   bottom: 0;
   display: block;
   width: 24px;
-  background-color: #eaf4fa;
+  background-color: var(--menu-footer);
 }
 .main .main-images .images-container .ogive:before {
   content: "";
@@ -1416,14 +1421,14 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(41, 141, 205, 0.75);
+  background-color: var(--items-color);
   transition: all 0.4s ease;
   border-radius: 16px;
   z-index: 2;
 }
 .main .line-items .line-item.active:before {
   height: calc(100% + 20px);
-  background-color: #0f5eaf;
+  background-color: var(--accent-2-color);
 }
 
 @media (max-width: 1640px) {
@@ -1983,14 +1988,15 @@ textarea {
 }
 .request .wpcf7-form .group-input input {
   min-height: 54px;
-  padding: 16px;
+  padding: 12px;
   font-family: var(--font-primary);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.2;
   color: var(--text-color);
-  background-color: #eaf4fa;
+  background-color: var(--menu-footer);
   border-radius: 16px;
+  border: 2px solid transparent;
 }
 .request .wpcf7-form .group-input input::placeholder {
   color: var(--text-color);
@@ -2006,7 +2012,7 @@ textarea {
   font-size: 18px;
   line-height: 1.2;
   color: #ffffff;
-  background-color: #0f5eaf;
+  background-color: var(--accent-2-color);
   border-radius: 16px;
 }
 
@@ -2095,7 +2101,7 @@ textarea {
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: #eaf4fa;
+  color: var(--menu-footer);
 }
 .footer .line-wrap .footer-menu .menu-item:not(:last-child) {
   margin-bottom: 3px;
@@ -2113,7 +2119,7 @@ textarea {
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: #eaf4fa;
+  color: var(--menu-footer);
 }
 .footer .line-wrap .footer-contacts a:not(:last-child) {
   margin-bottom: 3px;
@@ -2132,7 +2138,7 @@ textarea {
   line-height: 1.5;
   letter-spacing: 0.03em;
   text-decoration: underline;
-  color: #eaf4fa;
+  color: var(--menu-footer);
 }
 .footer .footer-bottom {
   display: flex;
@@ -2142,7 +2148,7 @@ textarea {
   width: 100%;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid #5faada;
+  border-top: 1px solid #ffffff;
 }
 .footer .footer-bottom p {
   display: block;
@@ -2152,7 +2158,7 @@ textarea {
   font-size: 11px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: #c9e2f2;
+  color: var(--menu-footer);
 }
 
 @media (max-width: 1440px) {
@@ -2254,6 +2260,6 @@ textarea {
   }
   .main .line-items .line-item:hover:before {
     height: calc(100% + 20px);
-    background-color: #0f5eaf;
+    background-color: var(--accent-2-color);
   }
 }/*# sourceMappingURL=app.css.map */

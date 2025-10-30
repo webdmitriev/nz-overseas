@@ -38,7 +38,7 @@
           font-size: 14px;
           line-height: 1.5;
           letter-spacing: 0.03em;
-          color: #eaf4fa;
+          color: var(--menu-footer);
         }
         &:not(:last-child) {
           margin-bottom: 3px;
@@ -57,7 +57,7 @@
         font-size: 14px;
         line-height: 1.5;
         letter-spacing: 0.03em;
-        color: #eaf4fa;
+        color: var(--menu-footer);
         &:not(:last-child) {
           margin-bottom: 3px;
         }
@@ -76,7 +76,7 @@
         line-height: 1.5;
         letter-spacing: 0.03em;
         text-decoration: underline;
-        color: #eaf4fa;
+        color: var(--menu-footer);
       }
     }
   }
@@ -88,7 +88,7 @@
     width: 100%;
     margin-top: 20px;
     padding-top: 20px;
-    border-top: 1px solid #5faada;
+    border-top: 1px solid $white;
     p {
       display: block;
       width: 100%;
@@ -97,7 +97,7 @@
       font-size: 11px;
       line-height: 1.5;
       letter-spacing: 0.03em;
-      color: #c9e2f2;
+      color: var(--menu-footer);
     }
   }
 }
