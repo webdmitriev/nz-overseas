@@ -504,6 +504,97 @@ textarea {
   left: calc(150px * 30);
 }
 
+.is-animation .nz-background .line-horizontals .line-horizontal {
+  width: 0;
+  transition: all 1s ease;
+}
+.is-animation .nz-background .line-horizontals.show-in .line-horizontal {
+  width: 100%;
+}
+.is-animation .nz-background .line-verticals .line-vertical {
+  height: 0;
+  transition: all 1s ease;
+}
+.is-animation .nz-background .line-verticals.show-in .line-vertical {
+  height: 100%;
+}
+.is-animation .header {
+  top: -150%;
+  transition: all 0.3s ease;
+}
+.is-animation .header.show-in {
+  top: 20px;
+}
+.is-animation .main .h1 {
+  opacity: 0;
+  transition: all 1s ease;
+}
+.is-animation .main .h1.show-in {
+  opacity: 1;
+}
+.is-animation .main .sub_title {
+  opacity: 0;
+  transition: all 1s ease;
+}
+.is-animation .main .sub_title.show-in {
+  opacity: 1;
+}
+.is-animation .main .main-images {
+  opacity: 0;
+  transition: all 1s ease;
+}
+.is-animation .main .main-images.show-in {
+  opacity: 1;
+}
+.is-animation .main .main-images .images-container .cup {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.is-animation .main .main-images .images-container .cup.show-in {
+  opacity: 1;
+}
+.is-animation .main .main-images .images-container .ogive {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.is-animation .main .main-images .images-container .ogive.show-in {
+  opacity: 1;
+}
+.is-animation .main .line-items .line-item {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.is-animation .main .line-items .line-item.show-in {
+  opacity: 1;
+}
+.is-animation .request {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.is-animation .request.show-in {
+  opacity: 1;
+}
+.is-animation .footer {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.is-animation .footer.show-in {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .is-animation .header {
+    top: 10px;
+  }
+  .is-animation .main .h1,
+  .is-animation .main .sub_title,
+  .is-animation .main .main-images,
+  .is-animation .main .line-items .line-item,
+  .is-animation .request,
+  .is-animation .footer {
+    opacity: 1;
+  }
+}
 .header {
   position: absolute;
   top: 10px;
