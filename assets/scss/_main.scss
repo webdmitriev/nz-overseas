@@ -13,12 +13,91 @@
     min-height: 620px;
   }
   .main-content {
+    position: relative;
     display: block;
     width: 100%;
     max-width: 540px;
     padding-top: 110px;
     .h1 {
+      position: relative;
       margin-bottom: 10px;
+      z-index: 10;
+    }
+    .sub_title {
+      position: relative;
+      z-index: 10;
+    }
+    .candle {
+      position: absolute;
+      display: block;
+      width: 18px;
+      background-color: #eaf4fa;
+      z-index: 5;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        display: block;
+        width: 42px;
+        background-color: #eaf4fa;
+        transform: translateX(-50%);
+      }
+      &.candle-01 {
+        bottom: -180px;
+        left: 74px;
+        height: 164px;
+        &:before {
+          top: 36px;
+          height: calc(100% - 72px);
+        }
+      }
+      &.candle-02 {
+        bottom: -290px;
+        left: 156px;
+        height: 164px;
+        &:before {
+          top: 36px;
+          height: calc(100% - 72px);
+        }
+      }
+      &.candle-03 {
+        bottom: -350px;
+        left: 260px;
+        height: 340px;
+        &:before {
+          top: 36px;
+          height: calc(100% - 72px);
+        }
+      }
+      &.candle-04 {
+        bottom: -180px;
+        left: 380px;
+        height: 196px;
+        background-color: #faf7f1;
+        &:before {
+          top: 58px;
+          height: calc(100% - 116px);
+          background-color: #faf7f1;
+        }
+      }
+      &.candle-05 {
+        bottom: -120px;
+        left: 480px;
+        height: 196px;
+        &:before {
+          top: 36px;
+          height: calc(100% - 72px);
+        }
+      }
+      &.candle-06 {
+        bottom: -220px;
+        left: 580px;
+        height: 340px;
+        &:before {
+          top: 42px;
+          height: calc(100% - 84px);
+        }
+      }
     }
   }
   .main-images {
@@ -418,12 +497,14 @@
     }
   }
   .line-items {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-end;
     gap: 16px;
     width: 100%;
+    z-index: 8;
     .line-item {
       position: relative;
       flex: 1;
@@ -469,7 +550,25 @@
     right: 0;
   }
   .main .line-items .line-item {
-    padding: 22px 44px;
+    padding: 20px 32px;
+  }
+  .main .main-content .candle.candle-01 {
+    left: 54px;
+  }
+  .main .main-content .candle.candle-02 {
+    left: 140px;
+  }
+  .main .main-content .candle.candle-03 {
+    left: 240px;
+  }
+  .main .main-content .candle.candle-04 {
+    left: 360px;
+  }
+  .main .main-content .candle.candle-05 {
+    left: 460px;
+  }
+  .main .main-content .candle.candle-06 {
+    left: 560px;
   }
 }
 @media (max-width: 1440px) {
@@ -602,8 +701,33 @@
     display: none;
   }
 
+  .main .main-content .candle {
+    width: 12px;
+  }
+  .main .main-content .candle:before {
+    width: 32px;
+  }
+  .main .main-content .candle.candle-01 {
+    left: 24px;
+  }
+  .main .main-content .candle.candle-02 {
+    left: 100px;
+  }
+  .main .main-content .candle.candle-03 {
+    left: 200px;
+  }
+  .main .main-content .candle.candle-04 {
+    left: 320px;
+  }
+  .main .main-content .candle.candle-05 {
+    left: 410px;
+  }
+  .main .main-content .candle.candle-06 {
+    left: 500px;
+  }
+
   .main .line-items .line-item {
-    padding: 18px 34px;
+    padding: 18px 32px;
     font-size: 17px;
   }
 }
@@ -614,6 +738,10 @@
   .main .line-items .line-item {
     padding: 16px 20px;
     font-size: 15px;
+  }
+
+  .main .main-content .candle.candle-06 {
+    display: none;
   }
 }
 @media (max-width: 991px) {
@@ -650,8 +778,34 @@
     height: 100%;
     background-color: rgba(41, 141, 205, 0.75);
   }
+
+  .main .main-content .candle.candle-02 {
+    bottom: -390px;
+    left: 50px;
+  }
+  .main .main-content .candle.candle-03 {
+    display: none;
+  }
+  .main .main-content .candle.candle-04 {
+    right: 40px;
+    left: auto;
+  }
+  .main .main-content .candle.candle-05 {
+    right: 64px;
+    bottom: -440px;
+    left: auto;
+  }
 }
 @media (max-width: 767px) {
+  .main .main-content .candle.candle-02 {
+    left: -30px;
+  }
+  .main .main-content .candle.candle-04 {
+    right: -20px;
+  }
+  .main .main-content .candle.candle-05 {
+    right: -34px;
+  }
 }
 @media (max-width: 576px) {
   .main {
@@ -758,6 +912,12 @@
   }
   .main .main-images .images-container .ogive.ogive-03 {
     height: 34px;
+  }
+  .main .main-content .candle.candle-01,
+  .main .main-content .candle.candle-02,
+  .main .main-content .candle.candle-04,
+  .main .main-content .candle.candle-05 {
+    display: none;
   }
 }
 @media (max-width: 460px) {

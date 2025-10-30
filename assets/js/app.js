@@ -290,6 +290,40 @@ document.addEventListener('DOMContentLoaded', function () {
         delayBeforeNext: 50, // Ждем после анимации перед следующим
         timeout: 10,
       })
+      .addAnimation('.main .main-content .candle.candle-01', 'show-in', {
+        initialDelay: 50, // Ждем перед началом анимации
+        delayBeforeNext: 50, // Ждем после анимации перед следующим
+        timeout: 10,
+        condition: () => window.innerWidth > 768 // Только на десктопе
+      })
+      .addAnimation('.main .main-content .candle.candle-02', 'show-in', {
+        initialDelay: 50, // Ждем перед началом анимации
+        delayBeforeNext: 50, // Ждем после анимации перед следующим
+        timeout: 10,
+        condition: () => window.innerWidth > 768 // Только на десктопе
+      })
+      .addAnimation('.main .main-content .candle.candle-03', 'show-in', {
+        initialDelay: 50, // Ждем перед началом анимации
+        delayBeforeNext: 50, // Ждем после анимации перед следующим
+        timeout: 10,
+        condition: () => window.innerWidth > 768 // Только на десктопе
+      })
+      .addAnimation('.main .main-content .candle.candle-04', 'show-in', {
+        initialDelay: 50, // Ждем перед началом анимации
+        delayBeforeNext: 50, // Ждем после анимации перед следующим
+        timeout: 10,
+        condition: () => window.innerWidth > 768 // Только на десктопе
+      })
+      .addAnimation('.main .main-content .candle.candle-05', 'show-in', {
+        initialDelay: 50, // Ждем перед началом анимации
+        delayBeforeNext: 50, // Ждем после анимации перед следующим
+        timeout: 10,
+      })
+      .addAnimation('.main .main-content .candle.candle-06', 'show-in', {
+        initialDelay: 50, // Ждем перед началом анимации
+        delayBeforeNext: 50, // Ждем после анимации перед следующим
+        timeout: 10,
+      })
       .addAnimation('.main .line-items .line-item.line-item-01', 'show-in', {
         initialDelay: 50, // Ждем перед началом анимации
         delayBeforeNext: 50, // Ждем после анимации перед следующим
