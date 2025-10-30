@@ -2,7 +2,7 @@
   position: relative;
   display: block;
   width: 100%;
-  padding-block: 160px 74px;
+  padding-block: 160px 50px;
   z-index: 50;
   .line-wrap {
     display: flex;
@@ -655,7 +655,7 @@
 }
 @media (max-width: 576px) {
   .main {
-    padding-block: 130px 70px;
+    padding-block: 130px 40px;
   }
   .main .line-wrap {
     min-height: auto;

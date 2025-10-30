@@ -1,19 +1,107 @@
-.main {
+.request {
   position: relative;
   display: block;
   width: 100%;
+  padding-block: 60px 100px;
   z-index: 50;
+  .h2 {
+    margin-bottom: 60px;
+  }
+  .wpcf7-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+    max-width: 1380px;
+    margin: 0 auto;
+    .group-input,
+    .group-submit {
+      display: block;
+      width: 100%;
+      max-width: calc(25% - 16px);
+      input {
+        display: block;
+        width: 100%;
+      }
+      .wpcf7-not-valid-tip {
+        font-size: 14px;
+      }
+    }
+    .group-input {
+      input {
+        min-height: 54px;
+        padding: 16px;
+        font-family: var(--font-primary);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.2;
+        color: var(--text-color);
+        background-color: #eaf4fa;
+        border-radius: 16px;
+        &::placeholder {
+          color: var(--text-color);
+        }
+      }
+    }
+    .group-submit {
+      max-width: 308px;
+      margin-left: 20px;
+      input {
+        min-height: 54px;
+        font-family: var(--font-primary);
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.2;
+        color: $white;
+        background-color: #0f5eaf;
+        border-radius: 16px;
+      }
+    }
+  }
 }
 
 @media (max-width: 1440px) {
+  .request .wpcf7-form .group-input {
+    max-width: calc(23% - 16px);
+  }
+  .request .wpcf7-form .group-submit {
+    max-width: 294px;
+    margin-left: 10px;
+  }
 }
-@media (max-width: 1199px) {
+@media (max-width: 1100px) {
+  .request .wpcf7-form .group-submit {
+    max-width: 260px;
+    margin-left: 0px;
+  }
 }
 @media (max-width: 991px) {
+  .request .h2 {
+    margin-bottom: 45px;
+  }
+  .request .wpcf7-form .group-input,
+  .request .wpcf7-form .group-submit {
+    max-width: calc(50% - 16px);
+  }
 }
 @media (max-width: 767px) {
+  .request .h2 br {
+    display: none;
+  }
 }
 @media (max-width: 576px) {
+  .request {
+    padding-block: 40px 60px;
+  }
+  .request .h2 {
+    margin-bottom: 30px;
+  }
+  .request .wpcf7-form .group-input,
+  .request .wpcf7-form .group-submit {
+    max-width: 100%;
+  }
 }
 @media (max-width: 460px) {
 }
